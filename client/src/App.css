@@ -1,0 +1,23 @@
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;  /* Make scrollbar slim */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;  /* Dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;  /* Dark scroll thumb */
+  border-radius: 4px;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;  /* Slightly lighter on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;  /* Make scrollbar slim */
+  scrollbar-color: #333 #1a1a1a;  /* thumb and track colors */
+}
