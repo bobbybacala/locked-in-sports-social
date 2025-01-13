@@ -59,6 +59,9 @@ const ExperienceSection = ({ userData, onSave, isOwnProfile }) => {
         <div className="bg-black rounded-lg shadow p-4 mb-6">
             <h2 className="text-lg font-semibold mb-2">Experience</h2>
 
+            {/* if no experience print no experience added */}
+            {experiences.length === 0 && <p className="p-2 text-neutral-500">No experience added.</p>}
+
             {/* if its our own profile we can add achievements  */}
             {experiences.map((exp) => (
                 <div key={exp._id} className="flex items-center m-3 justify-between">
@@ -166,7 +169,7 @@ const ExperienceSection = ({ userData, onSave, isOwnProfile }) => {
                     ) : (
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="mt-4 bg-neutral-700 text-white py-2 px-4 rounded hover:bg-neutral-800 transition duration-300"
+                            className="mt-4 bg-neutral-700 text-white py-1 px-4 rounded hover:bg-neutral-800 "
                         >
                             Edit Experiences
                         </button>

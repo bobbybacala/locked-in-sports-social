@@ -51,6 +51,11 @@ const AchievementsSection = ({ userData, onSave, isOwnProfile }) => {
         <div className="bg-black rounded-lg shadow p-4 mb-6">
             <h2 className="text-lg font-semibold mb-2">Achievements</h2>
 
+            {/* if there are no achivements print no achievements added */}
+            {achievements.length === 0 && (
+                <p className="p-2 text-neutral-500">No achievements added.</p>
+            )}
+
             {/* map each achievement with its component */}
             {achievements.map((ach) => (
                 <div key={ach._id} className=" flex items-center m-3 justify-between">
@@ -156,7 +161,7 @@ const AchievementsSection = ({ userData, onSave, isOwnProfile }) => {
                     ) : (
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="bg-neutral-700 text-white px-4 py-2 rounded-md mt-2 hover:bg-neutral-800"
+                            className="bg-neutral-700 text-white px-4 py-1 rounded-md mt-2 hover:bg-neutral-800"
                         >
                             Edit Achievements
                         </button>

@@ -59,6 +59,9 @@ const EducationSection = ({ userData, onSave, isOwnProfile }) => {
         <div className="bg-black rounded-lg shadow p-4 mb-6">
             <h2 className="text-lg font-semibold mb-2">Education</h2>
 
+            {/* if no educations print no educations added */}
+            {educations.length === 0 && <p className="p-2 text-neutral-500">No educations added.</p>}
+
             {/* if its our own profile we can add achievements  */}
             {educations.map((edu) => (
                 <div key={edu._id} className='m-3 flex justify-between items-start'>
@@ -161,7 +164,7 @@ const EducationSection = ({ userData, onSave, isOwnProfile }) => {
                             Save Education
                         </button>
                     ) : (
-                        <button onClick={() => setIsEditing(true)} className="bg-neutral-700 text-white px-4 py-2 rounded-md mt-4 hover:bg-neutral-800">
+                        <button onClick={() => setIsEditing(true)} className="bg-neutral-700 text-white px-4 py-1 rounded-md mt-4 hover:bg-neutral-800">
                             Edit Education
                         </button>
                     )}

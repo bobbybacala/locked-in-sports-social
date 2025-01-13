@@ -73,7 +73,8 @@ export const updateProfile = async (req, res) => {
             'skill',
             'experience',
             'coverPic',
-            'sports'
+            'sports',
+            'socialLinks',
         ]
 
         // we will get the updated fields from the request body

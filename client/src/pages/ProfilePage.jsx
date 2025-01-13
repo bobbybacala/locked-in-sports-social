@@ -8,7 +8,7 @@ import AchievementsSection from "../components/AchievementsSection"
 import EducationSection from "../components/EducationSection"
 import ExperienceSection from "../components/ExperienceSection"
 import SkillsSection from "../components/SkillsSection"
-// import SocialLinksSection from "../components/SocialLinksSection"
+import SocialLinksSection from "../components/SocialLinksSection"
 
 const ProfilePage = () => {
     // get the username from the params
@@ -80,7 +80,7 @@ const ProfilePage = () => {
             <SkillsSection userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} />
 
         
-            {/* <SocialLinksSection userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} /> */}
+            <SocialLinksSection userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} />
         </div>
     )
 }

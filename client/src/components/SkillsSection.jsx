@@ -36,6 +36,10 @@ const SkillsSection = ({ userData, isOwnProfile, onSave }) => {
     return (
         <div className="bg-black rounded-lg shadow p-4 mb-6">
             <h2 className="text-lg font-semibold mb-5">Skills</h2>
+
+            {/* if no skills print no skills added */}
+            {skills.length === 0 && <p className="text-neutral-500 p-2">No skills added.</p>}
+
             <div className="flex flex-wrap gap-3">
 
                 {/* display the skills */}
@@ -91,7 +95,7 @@ const SkillsSection = ({ userData, isOwnProfile, onSave }) => {
                     ) : (
                         <button
                             onClick={() => setIsEditing(true)}
-                            className="bg-neutral-700 text-white px-4 py-2 rounded-md mt-5 hover:bg-neutral-800"
+                            className="bg-neutral-700 text-white px-4 py-1 rounded-md mt-5 hover:bg-neutral-800"
                         >
                             Edit Skills
                         </button>
