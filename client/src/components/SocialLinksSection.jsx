@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 const SocialLinksSection = ({ userData, isOwnProfile, onSave }) => {
@@ -47,7 +48,7 @@ const SocialLinksSection = ({ userData, isOwnProfile, onSave }) => {
                 <p className="text-neutral-500 p-2">No social links added.</p>
             )}
 
-            <div className="space-y-4">
+            <div className="space-y-4 p-3">
                 {Object.entries(links).map(([platform, url]) => (
                     <div key={platform} className="flex items-center space-x-4">
                         <span className="capitalize text-neutral-200 font-medium">

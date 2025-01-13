@@ -7,7 +7,11 @@ export default {
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			boxShadow: {
+				'all-sides': '0 0 8px rgba(0, 0, 0, 0.5)', // Equal shadow on all sides
+			},
+		},
 	},
 	plugins: [daisyui],
 	daisyui: {
@@ -28,4 +32,3 @@ export default {
 		],
 	},
 }
-

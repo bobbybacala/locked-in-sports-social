@@ -40,13 +40,13 @@ const SkillsSection = ({ userData, isOwnProfile, onSave }) => {
             {/* if no skills print no skills added */}
             {skills.length === 0 && <p className="text-neutral-500 p-2">No skills added.</p>}
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 p-3">
 
                 {/* display the skills */}
                 {skills.map((skill, index) => (
                     <span
                         key={index}
-                        className="bg-neutral-900 text-white text-lg rounded-md py-1 px-4 hover:cursor-pointer items-center flex"
+                        className="bg-neutral-900 text-white text-lg rounded-md py-1 px-4 hover:cursor-pointer items-center flex hover:shadow-all-sides hover:shadow-gray-800"
                     >
                         {skill}
                         {isEditing && (
