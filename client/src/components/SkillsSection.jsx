@@ -35,51 +35,56 @@ const SkillsSection = ({ userData, isOwnProfile, onSave }) => {
 
     return (
         <div className="bg-black rounded-lg shadow p-4 mb-6">
-            <h2 className="text-lg font-semibold mb-5">Skills</h2>
+            <h2 className="text-lg font-semibold mb-2 text-white">Skills</h2>
 
             {/* if no skills print no skills added */}
             {skills.length === 0 && <p className="text-neutral-500 p-2">No skills added.</p>}
 
-            <div className="flex flex-wrap gap-3 p-3">
+            {skills.length > 0 && (
+                <>
+                    <div className="flex flex-wrap gap-3 p-3">
 
-                {/* display the skills */}
-                {skills.map((skill, index) => (
-                    <span
-                        key={index}
-                        className="bg-neutral-900 text-white text-lg rounded-md py-1 px-4 hover:cursor-pointer items-center flex hover:shadow-all-sides hover:shadow-gray-800"
-                    >
-                        {skill}
-                        {isEditing && (
-                            <button
-                                onClick={() => handleDeleteSkill(skill)}
-                                className="ml-2"
+                        {/* display the skills */}
+                        {skills.map((skill, index) => (
+                            <span
+                                key={index}
+                                className="bg-neutral-900 text-white text-lg rounded-md py-1 px-4 hover:cursor-pointer items-center flex hover:shadow-all-sides hover:shadow-gray-800"
                             >
-                                <X size={20} className="text-red-500 hover:bg-red-900 rounded-md" />
+                                {skill}
+                                {isEditing && (
+                                    <button
+                                        onClick={() => handleDeleteSkill(skill)}
+                                        className="ml-2"
+                                    >
+                                        <X size={20} className="text-red-500 hover:bg-red-900 rounded-md" />
+                                    </button>
+                                )}
+                            </span>
+                        ))}
+                    </div>
+
+
+                    {/* add the skill if editing */}
+                    {isEditing && (
+                        <div className="space-y-4 mt-6">
+                            <input
+                                type="text"
+                                placeholder="New Skill"
+                                value={newSkill}
+                                onChange={(e) => setNewSkill(e.target.value)}
+                                className="w-full p-2 border border-gray-300 rounded-md bg-neutral-900 text-white"
+                            />
+
+                            <button
+                                onClick={handleAddSkill}
+                                className="bg-neutral-700 text-white px-4 py-2 rounded-md hover:bg-neutral-800"
+                            >
+                                Add Skill
                             </button>
-                        )}
-                    </span>
-                ))}
-            </div>
+                        </div>
+                    )}
 
-
-            {/* add the skill if editing */}
-            {isEditing && (
-                <div className="space-y-4 mt-6">
-                    <input
-                        type="text"
-                        placeholder="New Skill"
-                        value={newSkill}
-                        onChange={(e) => setNewSkill(e.target.value)}
-                        className="w-full p-2 border border-gray-300 rounded-md bg-neutral-900 text-white"
-                    />
-
-                    <button
-                        onClick={handleAddSkill}
-                        className="bg-neutral-700 text-white px-4 py-2 rounded-md hover:bg-neutral-800"
-                    >
-                        Add Skill
-                    </button>
-                </div>
+                </>
             )}
 
             {/* if its our own profile we can add and save the skills */}
@@ -102,7 +107,6 @@ const SkillsSection = ({ userData, isOwnProfile, onSave }) => {
                     )}
                 </>
             )}
-
         </div>
     )
 }

@@ -57,7 +57,7 @@ const EducationSection = ({ userData, onSave, isOwnProfile }) => {
 
     return (
         <div className="bg-black rounded-lg shadow p-4 mb-6">
-            <h2 className="text-lg font-semibold mb-2">Education</h2>
+            <h2 className="text-lg font-semibold mb-2 text-white">Education</h2>
 
             {/* if no educations print no educations added */}
             {educations.length === 0 && <p className="p-2 text-neutral-500">No educations added.</p>}

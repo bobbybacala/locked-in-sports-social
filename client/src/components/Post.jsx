@@ -126,7 +126,7 @@ const Post = ({ post, defaultCommentsShow }) => {
                             <img
                                 src={post.author.profilePicUrl || "/avatar.png"}
                                 alt={post.author.name}
-                                className='size-10 rounded-full mr-3'
+                                className='size-10 rounded-full mr-3 object-cover'
                             />
                         </Link>
 

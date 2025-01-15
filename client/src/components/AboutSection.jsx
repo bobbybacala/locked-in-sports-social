@@ -14,7 +14,7 @@ const AboutSection = ({ userData, onSave, isOwnProfile }) => {
 
     return (
         <div className="bg-black p-4 rounded-lg mb-6">
-            <h2 className="text-lg font-semibold mb-2">About</h2>
+            <h2 className="text-lg font-semibold mb-2 text-white">About</h2>
 
             {/* if no about print no bio added */}
             {about === "" && <p className="p-2 text-neutral-500">No about added.</p>}

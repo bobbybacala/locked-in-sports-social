@@ -9,6 +9,7 @@ import EducationSection from "../components/EducationSection"
 import ExperienceSection from "../components/ExperienceSection"
 import SkillsSection from "../components/SkillsSection"
 import SocialLinksSection from "../components/SocialLinksSection"
+import PostsInProfilePg from "../components/PostsInProfilePg"
 
 const ProfilePage = () => {
     // get the username from the params
@@ -66,6 +67,9 @@ const ProfilePage = () => {
 
             {/* about section */}
             <AboutSection userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} />
+
+            {/* posts in profile pg */}
+            <PostsInProfilePg userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} />
 
 
             <AchievementsSection userData={userData} isOwnProfile={isOwnProfile} onSave={handleSave} />

@@ -57,7 +57,7 @@ const ExperienceSection = ({ userData, onSave, isOwnProfile }) => {
 
     return (
         <div className="bg-black rounded-lg shadow p-4 mb-6">
-            <h2 className="text-lg font-semibold mb-2">Experience</h2>
+            <h2 className="text-lg font-semibold mb-2 text-white">Experience</h2>
 
             {/* if no experience print no experience added */}
             {experiences.length === 0 && <p className="p-2 text-neutral-500">No experience added.</p>}

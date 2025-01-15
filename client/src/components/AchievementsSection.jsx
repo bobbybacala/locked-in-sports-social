@@ -49,7 +49,7 @@ const AchievementsSection = ({ userData, onSave, isOwnProfile }) => {
 
     return (
         <div className="bg-black rounded-lg shadow p-4 mb-6">
-            <h2 className="text-lg font-semibold mb-2">Achievements</h2>
+            <h2 className="text-lg font-semibold mb-2 text-white">Achievements</h2>
 
             {/* if there are no achivements print no achievements added */}
             {achievements.length === 0 && (

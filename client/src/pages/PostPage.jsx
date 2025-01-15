@@ -46,7 +46,7 @@ const PostPage = () => {
             </div>
 
             <div className='col-span-1 lg:col-span-3'>
-                <Post post={post.data} defaultCommentsShow={true}/>
+                <Post post={post.data} defaultCommentsShow={true} />
             </div>
         </div>
     )
