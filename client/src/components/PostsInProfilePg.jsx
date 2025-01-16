@@ -41,7 +41,7 @@ const PostsInProfilePg = ({ userData }) => {
 
             {postsOfCurrentUser.length > 0 && (
                 <div className="p-3 rounded-md bg-neutral-900">
-                    <div className="overflow-y-auto max-h-[400px] ">
+                    <div className="overflow-y-auto max-h-[500px] ">
                         <div className="min-w-full ">
                             {isPostsLoading ? (
                                 <p className="text-white">Loading posts...</p>
